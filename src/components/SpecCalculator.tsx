@@ -13,52 +13,52 @@ interface SpecCalculatorProps {
 
 export const SpecCalculator: React.FC<SpecCalculatorProps> = ({ onApplyToForm }) => {
   const [propertyType, setPropertyType] = useState('Victorian / Period Residence');
-  const [serviceType, setServiceType] = useState('[01] Internal Skimming & Plastering');
+  const [serviceType, setServiceType] = useState('1. Internal Skimming & Plastering');
   const [scale, setScale] = useState('Standard Residence (~100–180m²)');
 
   // Dynamic calculation logic for typography display
   const getSpecificationDetails = () => {
-    let systemSpec = 'British Gypsum Thistle Multi-Finish over high-key bonding coat with alkali-resistant scrim.';
-    let bsStandard = 'BS EN 13279-1 Class B1/2 / Laser Tolerance < 1.5mm';
+    let systemSpec = 'British Gypsum Thistle Multi-Finish over bonding coat with scrim reinforcement.';
+    let qualityStandard = 'Premium Residential Finish • Mirror-Smooth Guarantee';
     let estimatedDays = '3–5 Working Days';
-    let guidanceNote = 'Includes floor protection, corner bead laser-setting, two-coat trowel polish, and complete site clean-up.';
+    let guidanceNote = 'Includes floor protection, clean corner setting, two-coat trowel polish, and complete site clean-up.';
 
-    if (serviceType.includes('[02]')) {
-      systemSpec = 'Weber.pral M Through-Color Monocouche Render or K-Rend Silicone TC 15 with full reinforcement mesh.';
-      bsStandard = 'BS EN 998-1 Weatherproof Facade / Zero Cracking Guarantee';
+    if (serviceType.includes('2.')) {
+      systemSpec = 'Through-color monocouche render or thin-coat breathable silicone system.';
+      qualityStandard = '10-Year Weatherproof Guarantee • Self-Cleaning Protection';
       estimatedDays = scale.includes('Single Room') ? '2–3 Working Days' : scale.includes('Standard') ? '6–8 Working Days' : '10–14 Working Days';
-      guidanceNote = 'Includes scaffolding liaison, washdown preparation, bead installation, and machine spray application.';
-    } else if (serviceType.includes('[03]')) {
-      systemSpec = '3-Month Slaked Lime Putty, Natural Horsehair Fiber, and hand-riven Oak / Chestnut Laths.';
-      bsStandard = 'Historic England & BS 7913 Conservation Compliant';
+      guidanceNote = 'Includes scaffolding coordination, washdown preparation, bead installation, and machine spray application.';
+    } else if (serviceType.includes('3.')) {
+      systemSpec = 'Mature slaked lime putty, natural horsehair reinforcement, and riven oak laths.';
+      qualityStandard = 'Authentic Period Craftsmanship • Breathable Lime Restoration';
       estimatedDays = scale.includes('Single Room') ? '4–6 Working Days' : '12–18 Working Days';
-      guidanceNote = 'Breathable historic restoration preserving architectural undulations and original cornice profiles.';
-    } else if (serviceType.includes('[04]')) {
-      systemSpec = 'British Gypsum Gypframe Metal Stud Grid with 15mm SoundBloc & FireWall Plasterboard assemblies.';
-      bsStandard = 'BS 8212 / 60–120 Minute Fire Resistance Rating';
+      guidanceNote = 'Breathable historic restoration preserving authentic character and original moulding profiles.';
+    } else if (serviceType.includes('4.')) {
+      systemSpec = 'Sturdy metal stud partitioning with high-performance soundproofing and plasterboard.';
+      qualityStandard = 'High-Durability Partitioning • Superior Acoustic Insulation';
       estimatedDays = scale.includes('Standard') ? '4–6 Working Days' : '8–15 Working Days';
-      guidanceNote = 'Precision laser alignment, acoustic mineral wool cavity insulation, and taped/jointed or skimmed finishes.';
-    } else if (serviceType.includes('[05]')) {
-      systemSpec = 'Gypsol Anhydrite Flow Screed or Fiber-Reinforced Sand & Cement leveling datum.';
-      bsStandard = 'BS 8204-1 SR1 Floor Tolerance (< 3mm over 2m edge)';
+      guidanceNote = 'Precision alignment, acoustic cavity insulation, and taped/jointed or skimmed finishes.';
+    } else if (serviceType.includes('5.')) {
+      systemSpec = 'Liquid flow screed or reinforced sand/cement leveling for underfloor heating.';
+      qualityStandard = 'Solid Level Foundation • Perfectly Flat Surface';
       estimatedDays = '1–3 Working Days (Plus controlled curing period)';
       guidanceNote = 'Full underfloor heating pipe encapsulation eliminating air pockets for optimal thermal efficiency.';
-    } else if (serviceType.includes('[06]')) {
-      systemSpec = 'Authentic Italian Slaked Lime Marmorino / Bi-Component Waterproof Microcement with protective wax.';
-      bsStandard = 'Artisanal Architectural Spec / 100% Waterproof (Wet rooms)';
+    } else if (serviceType.includes('6.')) {
+      systemSpec = 'Hand-applied Italian Venetian marble plaster or seamless waterproof microcement.';
+      qualityStandard = 'Bespoke Italian Artisan Luxury • 100% Waterproof';
       estimatedDays = '4–7 Working Days (Multi-layer curing)';
-      guidanceNote = 'Hand-troweled bespoke surface texture with high-spec hydrophobic protective sealants.';
+      guidanceNote = 'Hand-troweled bespoke surface texture with high-spec protective sealants.';
     }
 
     if (scale.includes('Single Room')) {
-      if (!serviceType.includes('[02]') && !serviceType.includes('[03]') && !serviceType.includes('[06]')) {
+      if (!serviceType.includes('2.') && !serviceType.includes('3.') && !serviceType.includes('6.')) {
         estimatedDays = '1–2 Working Days';
       }
     } else if (scale.includes('Large Residence') || scale.includes('Commercial')) {
       estimatedDays = '10–20+ Working Days (Dedicated multi-craftsman crew)';
     }
 
-    return { systemSpec, bsStandard, estimatedDays, guidanceNote };
+    return { systemSpec, qualityStandard, estimatedDays, guidanceNote };
   };
 
   const details = getSpecificationDetails();
@@ -87,17 +87,17 @@ export const SpecCalculator: React.FC<SpecCalculatorProps> = ({ onApplyToForm })
         <div className="max-w-4xl mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#2B2B33] font-sans text-xs font-bold uppercase tracking-widest text-[#2B2B33] mb-4">
             <span className="text-[#F5821F]">02.</span>
-            <span>INTERACTIVE SPECIFICATION TOOL</span>
+            <span>INSTANT PROJECT ESTIMATOR</span>
           </div>
           <h2 
             className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#2B2B33] tracking-tight uppercase leading-tight"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             INSTANT PROJECT <br />
-            <span className="underline decoration-[#F5821F] decoration-2 underline-offset-8">SPECIFICATION GENERATOR.</span>
+            <span className="underline decoration-[#F5821F] decoration-2 underline-offset-8">SCOPE &amp; ESTIMATOR.</span>
           </h2>
           <p className="mt-6 font-sans text-base sm:text-lg text-[#3A3A45] max-w-2xl">
-            Select your property profile in Essex and required discipline below. Generate instant typographic technical specifications, BS compliance tolerances, and realistic timeline estimates without waiting for a callback.
+            Select your property type in Essex and required plastering service below. Generate an instant project scope, recommended materials, and realistic timeline estimates without waiting for a callback.
           </p>
         </div>
 
@@ -114,7 +114,7 @@ export const SpecCalculator: React.FC<SpecCalculatorProps> = ({ onApplyToForm })
             {/* Parameter 1: Property Type */}
             <div className="space-y-2">
               <label className="block font-mono text-xs font-bold uppercase tracking-wider text-[#2B2B33]">
-                1. PROPERTY CLASSIFICATION [ESSEX]
+                1. PROPERTY TYPE [ESSEX]
               </label>
               <select
                 value={propertyType}
@@ -132,26 +132,26 @@ export const SpecCalculator: React.FC<SpecCalculatorProps> = ({ onApplyToForm })
             {/* Parameter 2: Service Required */}
             <div className="space-y-2">
               <label className="block font-mono text-xs font-bold uppercase tracking-wider text-[#2B2B33]">
-                2. PLASTERING / RENDERING DISCIPLINE
+                2. PLASTERING &amp; RENDERING SERVICE
               </label>
               <select
                 value={serviceType}
                 onChange={(e) => setServiceType(e.target.value)}
                 className="w-full px-4 py-3.5 bg-[#FAFAFB] brutalist-border font-mono text-sm font-semibold text-[#2B2B33] focus:outline-none focus:ring-2 focus:ring-[#F5821F] focus:bg-white transition-all cursor-pointer"
               >
-                <option value="[01] Internal Skimming & Plastering">[01] Internal Two-Coat Skimming & Plastering</option>
-                <option value="[02] External Rendering & Monocouche">[02] External Monocouche & Weatherproof Silicone Render</option>
-                <option value="[03] Heritage Lath & Plaster Restoration">[03] Heritage Lime Plaster & Lath Conservation</option>
-                <option value="[04] Commercial Dry Lining & Partitions">[04] Commercial Dry Lining, MF Ceilings & Acoustics</option>
-                <option value="[05] Architectural Floor Screeding">[05] Liquid Flow & Anhydrite Floor Screeding</option>
-                <option value="[06] Venetian Polished Plaster & Microcement">[06] Venetian Marble Plaster & Seamless Microcement</option>
+                <option value="1. Internal Skimming & Plastering">1. Internal Two-Coat Skimming & Plastering</option>
+                <option value="2. External Rendering & Monocouche">2. External Monocouche & Weatherproof Silicone Render</option>
+                <option value="3. Heritage Lath & Plaster Restoration">3. Heritage Lime Plaster & Lath Conservation</option>
+                <option value="4. Commercial Dry Lining & Partitions">4. Commercial Dry Lining, Ceilings & Soundproofing</option>
+                <option value="5. Architectural Floor Screeding">5. Liquid Flow & Leveling Floor Screeding</option>
+                <option value="6. Venetian Polished Plaster & Microcement">6. Venetian Marble Plaster & Seamless Microcement</option>
               </select>
             </div>
 
             {/* Parameter 3: Scale / Area */}
             <div className="space-y-2">
               <label className="block font-mono text-xs font-bold uppercase tracking-wider text-[#2B2B33]">
-                3. APPROXIMATE SURFACE AREA SCALE
+                3. APPROXIMATE PROJECT SCALE
               </label>
               <select
                 value={scale}
@@ -167,7 +167,7 @@ export const SpecCalculator: React.FC<SpecCalculatorProps> = ({ onApplyToForm })
 
             <div className="pt-2">
               <div className="p-4 bg-[#FAFAFB] brutalist-border border-[#E8E8EE] font-mono text-xs text-[#6B6B78] leading-relaxed">
-                <strong>ESTIMATOR NOTE:</strong> All Essex Plasterers quotations are strictly fixed-price following an on-site laser survey. We never add unexpected extras or hidden material markups.
+                <strong>ESTIMATOR NOTE:</strong> All Essex Plasterers quotations are strictly fixed-price following a complimentary on-site survey. We never add unexpected extras or hidden material markups.
               </div>
             </div>
           </div>
@@ -178,7 +178,7 @@ export const SpecCalculator: React.FC<SpecCalculatorProps> = ({ onApplyToForm })
               <div className="flex items-center justify-between font-mono text-xs font-bold uppercase tracking-widest text-[#F5821F] pb-3 border-b border-[#3A3A45]">
                 <span className="flex items-center gap-2">
                   <FileText className="w-4 h-4" />
-                  <span>STEP 02: ARCHITECTURAL SPEC SHEET</span>
+                  <span>STEP 02: ESTIMATED SCOPE &amp; SUMMARY</span>
                 </span>
                 <span>[LIVE CALCULATOR]</span>
               </div>
@@ -197,10 +197,10 @@ export const SpecCalculator: React.FC<SpecCalculatorProps> = ({ onApplyToForm })
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                   <div className="p-4 bg-[#3A3A45] border border-[#4A4A58]">
                     <div className="font-mono text-[10px] uppercase text-[#F5821F] tracking-wider">
-                      BRITISH STANDARD COMPLIANCE
+                      FINISH QUALITY &amp; GUARANTEE
                     </div>
                     <div className="mt-1 font-mono text-xs font-bold text-white">
-                      {details.bsStandard}
+                      {details.qualityStandard}
                     </div>
                   </div>
 
@@ -233,7 +233,7 @@ export const SpecCalculator: React.FC<SpecCalculatorProps> = ({ onApplyToForm })
                 onClick={handleTransferToForm}
                 className="btn-professional-accent w-full py-4 px-6 flex items-center justify-center gap-3 cursor-pointer"
               >
-                <span>TRANSFER SPEC TO INQUIRY FORM</span>
+                <span>TRANSFER DETAILS TO INQUIRY FORM</span>
                 <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>

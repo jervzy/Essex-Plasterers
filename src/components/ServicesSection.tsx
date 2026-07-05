@@ -21,7 +21,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         <div className="max-w-4xl mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FAFAFB] border border-[#2B2B33] font-sans text-xs font-bold uppercase tracking-widest text-[#2B2B33] mb-4">
             <span className="text-[#F5821F]">01.</span>
-            <span>CORE ARCHITECTURAL SERVICES</span>
+            <span>PLASTERING &amp; RENDERING SERVICES</span>
           </div>
           
           <h2 
@@ -29,11 +29,11 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             style={{ fontFamily: 'var(--font-display)' }}
           >
             PRECISION SURFACES. <br />
-            <span className="underline decoration-[#F5821F] decoration-2 underline-offset-8">NUMBERED FOR ACCURACY.</span>
+            <span className="underline decoration-[#F5821F] decoration-2 underline-offset-8">CRAFTED TO PERFECTION.</span>
           </h2>
           
           <p className="mt-6 font-sans text-base sm:text-lg text-[#3A3A45] max-w-2xl leading-relaxed">
-            We reject generic "icon cards" and ambiguous trade promises. Below is our numbered catalogue of architectural plastering and rendering disciplines, each executed to strict British Standards (BS EN 13279 / BS 5262).
+            We take pride in clear communication, clean sites, and superior trade craftsmanship. Below is our numbered catalogue of residential and commercial plastering services, each delivered with unmatched attention to detail and long-term reliability.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                   {/* Right Side: BS Badge + Toggle Action */}
                   <div className="flex items-center justify-between md:justify-end gap-6 pt-2 md:pt-0 shrink-0">
                     <span className="hidden xl:inline-block font-mono text-xs font-semibold px-3 py-1 bg-white brutalist-border text-[#2B2B33]">
-                      {service.bsStandard}
+                      {service.qualityStandard}
                     </span>
 
                     <div className={`flex items-center gap-2 font-mono text-xs font-bold tracking-widest uppercase px-4 py-2 brutalist-border transition-all ${
@@ -90,7 +90,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                         ? 'bg-[#2B2B33] text-white' 
                         : 'bg-white text-[#2B2B33] group-hover:bg-[#F5821F] group-hover:text-white group-hover:border-[#F5821F]'
                     }`}>
-                      <span>{isOpen ? 'CLOSE SPEC' : 'VIEW SPEC'}</span>
+                      <span>{isOpen ? 'CLOSE DETAILS' : 'VIEW DETAILS'}</span>
                       {isOpen ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
                     </div>
                   </div>
@@ -105,7 +105,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                       <div className="lg:col-span-7 space-y-6">
                         <div>
                           <div className="font-mono text-[11px] uppercase tracking-widest text-[#F5821F] font-bold mb-2">
-                            // TECHNICAL DESCRIPTION
+                            SERVICE OVERVIEW
                           </div>
                           <p className="font-sans text-base sm:text-lg text-[#2B2B33] leading-relaxed">
                             {service.description}
@@ -116,10 +116,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                           <div className="p-4 bg-white brutalist-border">
                             <div className="flex items-center gap-2 font-mono text-xs text-[#6B6B78] uppercase mb-1">
                               <ShieldCheck className="w-4 h-4 text-[#F5821F]" />
-                              <span>SURFACE TOLERANCE</span>
+                              <span>FINISH QUALITY</span>
                             </div>
                             <div className="font-mono text-sm font-extrabold text-[#2B2B33]">
-                              {service.tolerance}
+                              {service.finishQuality}
                             </div>
                           </div>
 
@@ -145,7 +145,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                             }}
                             className="btn-professional-accent px-6 py-3 inline-flex items-center gap-2 cursor-pointer"
                           >
-                            <span>SELECT [{service.number}] FOR ESTIMATE INQUIRY</span>
+                            <span>SELECT [{service.number}] FOR FREE QUOTE</span>
                             <ArrowUpRight className="w-4 h-4" />
                           </a>
                         </div>
@@ -170,7 +170,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
 
                         <div>
                           <div className="font-mono text-xs font-extrabold uppercase tracking-widest text-[#2B2B33] pb-2 brutalist-border-b border-[#E8E8EE] flex items-center justify-between">
-                            <span>CERTIFIED MATERIALS USED</span>
+                            <span>PREMIUM MATERIALS USED</span>
                             <Layers className="w-3.5 h-3.5 text-[#6B6B78]" />
                           </div>
                           <ul className="mt-3 space-y-2">
@@ -195,10 +195,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         <div className="mt-12 p-6 sm:p-8 bg-[#FAFAFB] border border-[#2B2B33] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <div className="font-sans text-xs font-bold uppercase tracking-widest text-[#F5821F]">
-              NEED A BESPOKE ARCHITECTURAL FINISH?
+              NEED A BESPOKE PLASTERING SERVICE?
             </div>
             <div className="font-sans text-sm sm:text-base text-[#2B2B33] font-medium mt-1">
-              We regularly collaborate with structural engineers, interior designers, and heritage boards across Essex on bespoke specifications.
+              We regularly collaborate with homeowners, interior designers, and project managers across Essex on custom finishes and specialist restoration scopes.
             </div>
           </div>
 
@@ -206,7 +206,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             href="#contact"
             className="btn-professional-dark px-8 py-4 shrink-0 cursor-pointer"
           >
-            DISCUSS BESPOKE SPEC [↗]
+            DISCUSS YOUR PROJECT [↗]
           </a>
         </div>
 

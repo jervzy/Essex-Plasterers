@@ -22,12 +22,12 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="font-sans text-sm text-[#2B2B33] opacity-80 leading-relaxed max-w-sm font-medium">
-              Premier residential and commercial plastering contractors across Essex, UK. Engineering mirror-smooth internal skims, durable external monocouche renders, and heritage lime restorations to strict British Standards since 1998.
+              Premier residential and commercial plastering contractors across Essex, UK. Delivering mirror-smooth internal skims, durable external monocouche renders, and heritage lime restorations with uncompromising craftsmanship since 1998.
             </p>
 
             <div className="flex items-center gap-2 font-sans text-xs text-[#2B2B33] font-bold tracking-widest uppercase">
               <ShieldCheck className="w-4 h-4 text-[#F5821F]" />
-              <span>BS EN 13279-1 / BS 5262 COMPLIANT CONTRACTOR</span>
+              <span>VERIFIED ESSEX TRADE CRAFTSMEN &amp; GUARANTEED FINISH</span>
             </div>
           </div>
 
@@ -39,25 +39,25 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 font-sans text-xs font-bold tracking-wider uppercase">
               <li>
                 <a href="#services" className="text-[#2B2B33] hover:text-[#F5821F] transition-colors flex items-center justify-between">
-                  <span>01. SERVICES CATALOGUE</span>
+                  <span>01. OUR SERVICES</span>
                   <span className="text-[#F5821F]">→</span>
                 </a>
               </li>
               <li>
-                <a href="#process" className="text-[#2B2B33] hover:text-[#F5821F] transition-colors flex items-center justify-between">
-                  <span>02. SPEC CALCULATOR</span>
+                <a href="#calculator" className="text-[#2B2B33] hover:text-[#F5821F] transition-colors flex items-center justify-between">
+                  <span>02. PROJECT ESTIMATOR</span>
                   <span className="text-[#F5821F]">→</span>
                 </a>
               </li>
               <li>
                 <a href="#credibility" className="text-[#2B2B33] hover:text-[#F5821F] transition-colors flex items-center justify-between">
-                  <span>03. CREDIBILITY &amp; STATS</span>
+                  <span>03. REVIEWS &amp; GUARANTEE</span>
                   <span className="text-[#F5821F]">→</span>
                 </a>
               </li>
               <li>
                 <a href="#contact" className="text-[#2B2B33] hover:text-[#F5821F] transition-colors flex items-center justify-between">
-                  <span>04. WRITTEN ESTIMATES</span>
+                  <span>04. FREE QUOTE</span>
                   <span className="text-[#F5821F]">→</span>
                 </a>
               </li>
@@ -96,9 +96,9 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-6">
-            <span className="font-bold">BS EN 13279-1</span>
+            <span className="font-bold">100% SATISFACTION</span>
             <span>•</span>
-            <span className="font-bold">BS 5262</span>
+            <span className="font-bold">ZERO SNAG MANDATE</span>
             <span>•</span>
             <button
               type="button"

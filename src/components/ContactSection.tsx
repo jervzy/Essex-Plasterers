@@ -17,7 +17,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [location, setLocation] = useState('CHELMSFORD');
-  const [service, setService] = useState('[01] Internal Skimming & Plastering');
+  const [service, setService] = useState('1. Internal Skimming & Plastering');
   const [details, setDetails] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,7 +27,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
   useEffect(() => {
     if (initialSpec) {
       setService(initialSpec.serviceType);
-      const autoNote = `[PRE-LOADED SPECIFICATION FROM CALCULATOR]\n• Property: ${initialSpec.propertyType}\n• Scale: ${initialSpec.scale}\n• Recommended System: ${initialSpec.systemSpec}\n• Estimated Duration: ${initialSpec.estimatedDays}\n\nPlease provide a written estimate for this specification.`;
+      const autoNote = `[PRE-LOADED SCOPE FROM ESTIMATOR]\n• Property: ${initialSpec.propertyType}\n• Scale: ${initialSpec.scale}\n• Recommended System: ${initialSpec.systemSpec}\n• Estimated Duration: ${initialSpec.estimatedDays}\n\nPlease provide a free quote and timeline for this project scope.`;
       setDetails(autoNote);
     }
   }, [initialSpec]);
@@ -75,7 +75,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
           </h2>
           
           <p className="mt-6 font-sans text-base sm:text-lg text-[#3A3A45] max-w-2xl leading-relaxed">
-            We do not issue vague verbal estimates. Fill out the specification form below or contact our Chelmsford dispatch office directly. All site visits and written estimates across Essex are complimentary and valid for 30 days.
+            We do not issue vague verbal estimates. Fill out the inquiry form below or contact our Chelmsford office directly. All site visits and written estimates across Essex are complimentary and valid for 30 days.
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
                 </div>
                 <div>
                   <div className="font-mono text-[11px] uppercase text-[#6B6B78] tracking-wider">
-                    TELEPHONE ESTIMATES &amp; SITE DISPATCH
+                    DIRECT TELEPHONE ESTIMATES
                   </div>
                   <a 
                     href="tel:01245892400" 
@@ -118,7 +118,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
                 </div>
                 <div>
                   <div className="font-mono text-[11px] uppercase text-[#6B6B78] tracking-wider">
-                    ELECTRONIC SPECIFICATIONS &amp; PLANS
+                    PROJECT PLANS &amp; DRAWINGS
                   </div>
                   <a 
                     href="mailto:estimates@essexplasterers.co.uk" 
@@ -127,7 +127,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
                     estimates@essexplasterers.co.uk
                   </a>
                   <div className="font-sans text-xs text-[#6B6B78] mt-1">
-                    PDF architectural drawings &amp; BOQ accepted.
+                    PDF drawings &amp; project specs welcomed.
                   </div>
                 </div>
               </div>
@@ -199,7 +199,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="flex items-center justify-between pb-4 brutalist-border-b border-[#E8E8EE]">
                   <h3 className="font-mono text-sm sm:text-base font-extrabold uppercase tracking-widest text-[#2B2B33]">
-                    PROJECT SPECIFICATION &amp; SURVEY REQUEST //
+                    FREE QUOTE &amp; SITE SURVEY REQUEST //
                   </h3>
                   <span className="font-mono text-xs font-bold text-[#F5821F]">
                     [CONFIDENTIAL]
@@ -277,7 +277,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
                 {/* Service Discipline Selector */}
                 <div className="space-y-2">
                   <label htmlFor="service" className="block font-mono text-xs font-bold uppercase tracking-wider text-[#2B2B33]">
-                    PRIMARY DISCIPLINE REQUIRED *
+                    PRIMARY SERVICE REQUIRED *
                   </label>
                   <select
                     id="service"
@@ -285,19 +285,19 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
                     onChange={(e) => setService(e.target.value)}
                     className="w-full px-4 py-3.5 bg-[#FAFAFB] brutalist-border font-mono text-sm font-semibold text-[#2B2B33] focus:outline-none focus:ring-2 focus:ring-[#F5821F] focus:bg-white transition-all cursor-pointer"
                   >
-                    <option value="[01] Internal Skimming & Plastering">[01] Internal Skimming &amp; Plastering</option>
-                    <option value="[02] External Rendering & Monocouche">[02] External Rendering &amp; Monocouche</option>
-                    <option value="[03] Heritage Lath & Plaster Restoration">[03] Heritage Lath &amp; Plaster Restoration</option>
-                    <option value="[04] Commercial Dry Lining & Partitions">[04] Commercial Dry Lining &amp; Partitions</option>
-                    <option value="[05] Architectural Floor Screeding">[05] Architectural Floor Screeding</option>
-                    <option value="[06] Venetian Polished Plaster & Microcement">[06] Venetian Polished Plaster &amp; Microcement</option>
+                    <option value="1. Internal Skimming & Plastering">1. Internal Skimming &amp; Plastering</option>
+                    <option value="2. External Rendering & Monocouche">2. External Rendering &amp; Monocouche</option>
+                    <option value="3. Heritage Lath & Plaster Restoration">3. Heritage Lath &amp; Plaster Restoration</option>
+                    <option value="4. Commercial Dry Lining & Partitions">4. Commercial Dry Lining &amp; Partitions</option>
+                    <option value="5. Architectural Floor Screeding">5. Architectural Floor Screeding</option>
+                    <option value="6. Venetian Polished Plaster & Microcement">6. Venetian Polished Plaster &amp; Microcement</option>
                   </select>
                 </div>
 
                 {/* Scope Details / Notes */}
                 <div className="space-y-2">
                   <label htmlFor="details" className="block font-mono text-xs font-bold uppercase tracking-wider text-[#2B2B33] flex items-center justify-between">
-                    <span>APPROXIMATE AREA, TIMELINE OR ARCHITECTURAL NOTES</span>
+                    <span>APPROXIMATE AREA, TIMELINE OR PROJECT NOTES</span>
                     <span className="font-normal text-[11px] text-[#6B6B78]">[OPTIONAL]</span>
                   </label>
                   <textarea
@@ -327,11 +327,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
                   {isSubmitting ? (
                     <>
                       <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-                      <span>DISPATCHING SPECIFICATION TO ESSEX HQ...</span>
+                      <span>SENDING INQUIRY TO ESSEX TEAM...</span>
                     </>
                   ) : (
                     <>
-                      <span>SUBMIT SPECIFICATION FOR 48-HOUR ESTIMATE</span>
+                      <span>REQUEST FREE WRITTEN QUOTE</span>
                       <ArrowUpRight className="w-5 h-5" />
                     </>
                   )}
@@ -345,7 +345,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
                     <div className="flex items-center gap-2">
                       <CheckCircle2 className="w-6 h-6 text-[#F5821F]" />
                       <span className="font-mono text-sm sm:text-base font-extrabold uppercase tracking-widest text-[#2B2B33]">
-                        SPECIFICATION RECEIVED //
+                        INQUIRY RECEIVED //
                       </span>
                     </div>
                     <span className="font-mono text-xs font-bold px-3 py-1 bg-[#2B2B33] text-white">
@@ -355,7 +355,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
 
                   <div className="space-y-3 font-sans text-sm sm:text-base text-[#2B2B33] leading-relaxed">
                     <p>
-                      Thank you, <strong className="font-extrabold underline decoration-[#F5821F] decoration-2">{name}</strong>. Your project specification for <strong className="font-bold">{service}</strong> in <strong className="font-bold">{location}</strong> has been logged in our Essex estimator dispatch system.
+                      Thank you, <strong className="font-extrabold underline decoration-[#F5821F] decoration-2">{name}</strong>. Your inquiry for <strong className="font-bold">{service}</strong> in <strong className="font-bold">{location}</strong> has been logged in our Essex estimator dispatch system.
                     </p>
                     <p>
                       Our senior surveyor has been notified and will review your scope requirements. You will receive a direct telephone call or confirmation email at <strong className="font-mono text-xs bg-white px-2 py-1 brutalist-border border-[#E8E8EE]">{email || phone}</strong> within 24 business hours.
@@ -364,7 +364,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
 
                   <div className="p-4 bg-white brutalist-border font-mono text-xs text-[#6B6B78] space-y-1">
                     <div className="flex justify-between">
-                      <span>DISPATCH STATUS:</span>
+                      <span>STATUS:</span>
                       <strong className="text-[#F5821F]">ASSIGNED TO SENIOR SURVEYOR</strong>
                     </div>
                     <div className="flex justify-between">
@@ -372,8 +372,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
                       <strong>WITHIN 24–48 HOURS</strong>
                     </div>
                     <div className="flex justify-between">
-                      <span>COMPLIANCE DATUM:</span>
-                      <strong>BS EN 13279 / BS 5262</strong>
+                      <span>FINISH GUARANTEE:</span>
+                      <strong>100% SATISFACTION &amp; ZERO SNAGS</strong>
                     </div>
                   </div>
                 </div>
@@ -384,7 +384,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialSpec }) =
                   className="w-full py-3.5 px-6 font-mono text-xs font-bold tracking-widest uppercase text-[#2B2B33] bg-white brutalist-border hover:bg-[#FAFAFB] transition-all flex items-center justify-center gap-2"
                 >
                   <RefreshCw className="w-4 h-4 text-[#F5821F]" />
-                  <span>SUBMIT ANOTHER PROJECT SPECIFICATION</span>
+                  <span>SUBMIT ANOTHER INQUIRY</span>
                 </button>
               </div>
             )}

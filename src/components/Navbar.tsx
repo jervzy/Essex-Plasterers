@@ -20,10 +20,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
 
   const navItems = [
     { label: 'SERVICES', href: '#services', num: '01' },
-    { label: 'PROCESS & TOLERANCE', href: '#process', num: '02' },
-    { label: 'CREDIBILITY', href: '#credibility', num: '03' },
-    { label: 'SPEC CALCULATOR', href: '#calculator', num: '04' },
-    { label: 'CONTACT', href: '#contact', num: '05' },
+    { label: 'PROJECT ESTIMATOR', href: '#calculator', num: '02' },
+    { label: 'REVIEWS & GUARANTEE', href: '#credibility', num: '03' },
+    { label: 'FREE QUOTE', href: '#contact', num: '04' },
   ];
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {

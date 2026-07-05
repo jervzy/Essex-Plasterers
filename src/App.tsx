@@ -25,10 +25,10 @@ export default function App() {
   const handleSelectService = (service: ServiceItem) => {
     setSelectedSpec({
       propertyType: 'Residential / Commercial (To Be Confirmed)',
-      serviceType: `[${service.number}] ${service.title}`,
-      scale: 'Standard Surface Specification',
+      serviceType: `${service.number}. ${service.title}`,
+      scale: 'Standard Plastering Scope',
       estimatedDays: service.turnaround,
-      systemSpec: `${service.materialsUsed.join(' // ')} (${service.bsStandard})`,
+      systemSpec: `${service.materialsUsed.join(' • ')} (${service.qualityStandard})`,
     });
   };
 
@@ -55,10 +55,10 @@ export default function App() {
         {/* Section 01: Numbered Services List */}
         <ServicesSection onSelectService={handleSelectService} />
 
-        {/* Section 02: Interactive Specification Tool & Estimator */}
+        {/* Section 02: Interactive Project Scope & Estimator */}
         <SpecCalculator onApplyToForm={handleApplySpecFromCalculator} />
 
-        {/* Section 03: Heritage, Tolerance & Trust Statement */}
+        {/* Section 03: Heritage, Craftsmanship & Trust Statement */}
         <CredibilitySection />
 
         {/* Section 04: Restrained Contact & Inquiry Flow */}

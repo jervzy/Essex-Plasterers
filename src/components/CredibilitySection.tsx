@@ -24,7 +24,7 @@ export const CredibilitySection: React.FC = () => {
 
           <div className="mt-8 pt-8 border-t border-[#2B2B33] max-w-3xl">
             <p className="font-sans text-lg sm:text-xl font-medium text-[#2B2B33] opacity-90 leading-relaxed">
-              In an industry frequently degraded by rushed labor and uneven surface tolerances, Essex Plasterers operates under a singular mandate: <strong className="font-bold text-[#2B2B33] underline decoration-[#F5821F] decoration-2 underline-offset-4">preparation is as vital as the polish.</strong> For over two continuous decades, we have partnered with Essex’s most discerning homeowners, heritage conservation boards, and commercial site managers to engineer surfaces that endure for generations.
+              In an industry too often let down by rushed work and short-term fixes, Essex Plasterers operates under a simple rule: <strong className="font-bold text-[#2B2B33] underline decoration-[#F5821F] decoration-2 underline-offset-4">preparation is as vital as the final finish.</strong> For over two continuous decades, we have partnered with Essex homeowners, heritage trusts, and local builders to deliver smooth, durable plastering that stands the test of time.
             </p>
           </div>
         </div>
@@ -52,15 +52,15 @@ export const CredibilitySection: React.FC = () => {
           <div className="p-6 sm:p-8 border-b lg:border-r border-[#3A3A45] flex flex-col justify-between">
             <div className="flex items-center justify-between">
               <span className="font-mono text-[11px] text-[#F5821F] uppercase tracking-widest">
-                [TOLERANCE DATUM]
+                [FINISH QUALITY]
               </span>
               <Award className="w-4 h-4 text-[#A0A0AD]" />
             </div>
             <div className="mt-6 font-mono text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
-              &lt; 1.5 <span className="text-xl sm:text-2xl text-[#F5821F]">MM</span>
+              100% <span className="text-xl sm:text-2xl text-[#F5821F]">FLAT</span>
             </div>
             <p className="mt-3 font-sans text-xs sm:text-sm text-[#D0D0DC] leading-relaxed">
-              Maximum surface deviation checked over a 3-meter laser straight edge for mirror skims.
+              Mirror-smooth skims, clean lines, and zero snagging on every wall and ceiling.
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export const CredibilitySection: React.FC = () => {
               1,400+
             </div>
             <p className="mt-3 font-sans text-xs sm:text-sm text-[#D0D0DC] leading-relaxed">
-              Residential refits, heritage restorations, and commercial dry lining contracts delivered to BS 5262.
+              Residential renovations, period restorations, and commercial dry lining contracts across Essex.
             </p>
           </div>
 
@@ -102,10 +102,10 @@ export const CredibilitySection: React.FC = () => {
         <div className="mt-20 sm:mt-24">
           <div className="flex items-center justify-between mb-8 pb-3 brutalist-border-b border-[#2B2B33]">
             <h3 className="font-mono text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#2B2B33]">
-              VERIFIED ARCHITECTURAL SITE LOGS &amp; CLIENT TESTIMONIALS //
+              RECENT PROJECTS &amp; CLIENT TESTIMONIALS //
             </h3>
             <span className="font-mono text-xs font-bold text-[#F5821F] hidden sm:inline">
-              [BS EN 13279 AUDITED]
+              [VERIFIED REVIEWS]
             </span>
           </div>
 
@@ -146,15 +146,15 @@ export const CredibilitySection: React.FC = () => {
         <div className="mt-12 p-6 sm:p-8 bg-white brutalist-border flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-1">
             <div className="font-mono text-xs font-bold uppercase tracking-widest text-[#2B2B33]">
-              BRITISH STANDARD COMPLIANCE GUARANTEE
+              OUR CRAFTSMANSHIP GUARANTEE
             </div>
             <p className="font-sans text-sm text-[#6B6B78] max-w-3xl">
-              All materials supplied and installed by Essex Plasterers strictly conform to BS EN 13279-1 (Gypsum Plasters), BS EN 998-1 (Rendering Mortars), and BS 5262 (Code of practice for external renderings).
+              We use only premium, industry-certified materials from British Gypsum, Weber, and K-Rend. Every project is backed by our zero-snag mandate, leaving your property spotless and finished to perfection.
             </p>
           </div>
 
           <div className="shrink-0 font-mono text-xs font-extrabold px-4 py-2.5 bg-[#FAFAFB] brutalist-border text-[#2B2B33]">
-            [ZERO-SNAG MANDATE]
+            [100% SATISFACTION]
           </div>
         </div>
 
