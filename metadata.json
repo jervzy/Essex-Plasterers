@@ -1,0 +1,6 @@
+{
+  "name": "Essex Plasterers",
+  "description": "Premier residential and commercial plastering contractors across Essex, UK. Typography-driven brutalist editorial homepage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

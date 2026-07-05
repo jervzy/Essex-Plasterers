@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-charcoal: #2B2B33;
+  --color-charcoal-light: #3A3A45;
+  --color-accent: #F5821F;
+  --color-accent-hover: #D96E14;
+  --color-offwhite: #FAFAFB;
+  --color-border-subtle: #E8E8EE;
+}
+
+@layer base {
+  body {
+    background-color: #FFFFFF;
+    color: #2B2B33;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    selection-background-color: #F5821F;
+    selection-color: #FFFFFF;
+  }
+
+  ::selection {
+    background-color: #2B2B33;
+    color: #FFFFFF;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Professional Polish Theme: Crisp architectural borders and flat, high-contrast styling */
+.brutalist-border-t {
+  border-top: 1px solid #2B2B33;
+}
+
+.brutalist-border-b {
+  border-bottom: 1px solid #2B2B33;
+}
+
+.brutalist-border {
+  border: 1px solid #2B2B33;
+}
+
+/* In the Professional Polish design theme, offset drop-shadows are removed in favor of clean 2px borders and flat architectural contrast */
+.brutalist-shadow {
+  box-shadow: none !important;
+}
+
+.brutalist-shadow-accent {
+  box-shadow: none !important;
+}
+
+.brutalist-shadow-sm {
+  box-shadow: none !important;
+}
+
+/* Professional Polish Button & Badge Utilities */
+.btn-professional-dark {
+  background-color: #2B2B33;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: 2px solid #2B2B33;
+  transition: all 0.2s ease;
+}
+.btn-professional-dark:hover {
+  background-color: transparent;
+  color: #2B2B33;
+}
+
+.btn-professional-accent {
+  background-color: #F5821F;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: 2px solid #F5821F;
+  transition: all 0.2s ease;
+}
+.btn-professional-accent:hover {
+  background-color: transparent;
+  color: #F5821F;
+}
+
+/* Hide scrollbar for clean horizontal scrolling if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
