@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Logo & Philosophy (Spans 5 cols) */}
           <div className="md:col-span-5 space-y-6">
             <div className="inline-block bg-white py-2">
-              <EssexLogo className="h-9 sm:h-10" />
+              <EssexLogo className="h-10 sm:h-12" />
             </div>
 
             <p className="font-sans text-sm text-[#2B2B33] opacity-80 leading-relaxed max-w-sm font-medium">

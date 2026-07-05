@@ -58,7 +58,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             className="group block py-2 focus:outline-none focus:ring-2 focus:ring-[#F5821F]"
             aria-label="Essex Plasterers Homepage"
           >
-            <EssexLogo className="h-10 sm:h-12" />
+            <EssexLogo className="h-11 sm:h-14 md:h-16" />
           </a>
 
           {/* Desktop Navigation - Professional Polish Typography */}
